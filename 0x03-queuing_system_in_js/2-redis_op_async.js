@@ -25,3 +25,4 @@ async function main() {
     setNewSchool('HolbertonSanFrancisco', '100');
     await displaySchoolValue('HolbertonSanFrancisco');
 }
+

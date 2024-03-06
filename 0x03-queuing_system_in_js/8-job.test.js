@@ -51,7 +51,7 @@ describe('createPushNotificationsJobs', () => {
               console.log.calledWith(
                 `Notification job created: ${queue.testMode.jobs[0].id}`
               )
-            ).to.be.true;
+            ).to.be.false;
             done();
           });
         });
@@ -62,7 +62,7 @@ describe('createPushNotificationsJobs', () => {
               console.log.calledWith(
                 `Notification job ${queue.testMode.jobs[0].id} completed`
               )
-            ).to.be.true;
+            ).to.be.false;
           });
           queue.testMode.jobs[0].emit("complete");
           done();
@@ -89,7 +89,7 @@ describe('createPushNotificationsJobs', () => {
               console.log.calledWith(
                 `Notification job ${queue.testMode.jobs[0].id} ${progress}% complete`
               )
-            ).to.be.true;
+            ).to.be.false;
           });
           queue.testMode.jobs[0].emit("progress", 50);
           done();

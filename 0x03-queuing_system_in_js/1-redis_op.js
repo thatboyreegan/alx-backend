@@ -1,4 +1,3 @@
-import { redis } from 'kue';
 import { createClient, print } from 'redis';
 
 const client = createClient();
